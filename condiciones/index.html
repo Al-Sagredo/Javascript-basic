@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Parte 1</h1>
+    <p>Haz clic en la imagen y ve el borde</p>
+    <img src="http://placedog.net/300" onclick="
+        imagen = document.querySelector('img')
+        if (imagen.style.border == 'none'){
+            imagen.style.border = '2px solid red'
+        }
+        else {
+            imagen.style.border='none' 
+        }
+    ">
+
+    <h1>Parte 2</h1>
+    <p>Puedes llevar máximo 10 stickers</p>
+    <div>
+        <img id="img1" src="http://placedog.net/200">
+        <input type="number" id="input1">
+    </div>
+    <div>
+        <img id="img2" src="http://placedog.net/200">
+        <input type="number" id="input2">
+    </div>
+    <div>
+        <img id="img3" src="http://placedog.net/200">
+        <input type="number" id="input3">
+    </div>
+    <button onclick="
+        input1Valor = Number(document.querySelector('#input1').value)
+        input2Valor = Number(document.querySelector('#input2').value)
+        input3Valor = Number(document.querySelector('#input3').value)
+        suma = input1Valor + input2Valor + input3Valor
+        if(suma <= 10 ){
+            document.querySelector('#texto').innerHTML = 'LLevas ' + suma + ' stickers'
+        }
+        else document.querySelector('#texto').innerHTML = 'LLevas demasiados stickers'
+
+    ">Verificar</button>
+    <p id="texto"></p>
+
+<h1>Parte 3</h1>
+<h2>Ingresa el password</h2>
+<select id="s1">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+</select>
+<select id="s2">
+    <option value="1" >1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+</select>
+<select id="s3">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+</select>
+<button onclick="
+    seleccion1 = document.querySelector('#s1').value
+    seleccion2 = document.querySelector('#s2').value
+    seleccion3 = document.querySelector('#s3').value
+    pass = seleccion1 + seleccion2 + seleccion3
+    if (pass === '911'){
+        document.querySelector('#pa').innerHTML = 'password 1 es correcto'
+    }else if (pass === '714'){
+        document.querySelector('#pa').innerHTML = 'password 2 es correcto'
+    }else document.querySelector('#pa').innerHTML = 'password incorrecto'
+
+">Ingresar</button>
+<p id="pa"></p>
+</body>
+
+</html>
