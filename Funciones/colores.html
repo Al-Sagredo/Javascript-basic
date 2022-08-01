@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div style="display:flex;">
+<div style=" margin-right:10px; width:200px; height:200px; background-color: red;" id="div1"></div>
+<div style=" margin-right:10px; width:200px; height:200px; background-color: pink;" id="div2"></div>
+<div style=" margin-right:10px; width:200px; height:200px; background-color: orange;" id="div3"></div>
+<div style=" margin-right:10px; width:200px; height:200px; background-color: purple;" id="div4"></div>
+
+<p style="margin-left:50px">
+    a = Aquamarine </br>
+    s = Chartreuse </br>
+    d = Cyan
+</p>
+</div>
+<p> 
+    1. Elija un color con las teclas a, s , d
+</p>
+<p>
+    2. Haga clic sobre los cuadros
+</p>
+
+<script>
+/*Crea un script que guarde dentro de una variable global un color
+dependiendo de la letra del teclado presionada. (2 Puntos).
+○ Al presionar la letra a un color a tu elección.
+○ Al presionar la letra s un segundo color a tu elección.
+○ Al presionar la letra d un tercer color.*/
+
+let color
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'a') {
+        color = "#7FFFD4"
+
+    } else if (event.key === 's') {
+        color = "#7FFF00"
+
+    } else if (event.key == 'd'){
+        color = "#00FFFF"
+        
+    }
+    })
+    
+/*Dentro del script agrega el evento que al hacerle click a uno de los divs, este
+cambie de color al color seleccionado. Utiliza addEventListener para agregar
+el evento.
+*/
+
+let div1 = document.getElementById("div1")
+let div2 = document.getElementById("div2")
+let div3 = document.getElementById("div3")
+let div4 = document.getElementById("div4")
+
+div1.addEventListener("click", () => div1.style.backgroundColor = color)
+div2.addEventListener("click", () => div2.style.backgroundColor = color)
+div3.addEventListener("click", () => div3.style.backgroundColor = color)
+div4.addEventListener("click", () => div4.style.backgroundColor = color)
+
+
+    </script>
+</body>
+
+</html>
