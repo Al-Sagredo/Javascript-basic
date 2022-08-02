@@ -1,0 +1,5 @@
+**Aplicando los conceptos y herramientas aprendidas hasta ahora, en este desafío deberás
+programar la renderización dinámica de propiedades inmobiliarias y los filtros de búsquedas
+de un menú lateral.**
+
+Dynamic web page that obtains data from an array of objects using functions, for of loop, conditionals, and interpolation into an html template.
