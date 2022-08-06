@@ -58,11 +58,12 @@ let contadorPropiedades = 0
 
 btn.addEventListener("click", function () {
   getInputs()
-  checkEmptyField()
-  seccionPropiedades.innerHTML = filtrar()
-  total.innerHTML = contadorPropiedades
+  if(checkEmptyField()){
+    seccionPropiedades.innerHTML = filtrar()
+    total.innerHTML = contadorPropiedades
+  }
+ 
 })
-
 
 //selecciona los inputs del DOM
 function getInputs() {
@@ -75,7 +76,9 @@ function getInputs() {
  function checkEmptyField() {
    if (inputCuartos == "" || inputMetrosMin == "" || inputMetrosMax == "") {
      alert("Faltan campos por llenar")
+     return false
    }
+   return true
  }
  
  //recorre el array, selecciona los objetos que cumplen con la busqueda y crea el template
