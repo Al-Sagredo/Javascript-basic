@@ -57,25 +57,29 @@ let html = ""
 let contadorPropiedades = 0
 
 btn.addEventListener("click", function () {
-  getInputs()
-  checkEmptyField()
+
+getInputs()
+ if( checkEmptyField()){
   seccionPropiedades.innerHTML = filtrar()
   total.innerHTML = contadorPropiedades
+ }
+ 
 })
 
-
-//selecciona los inputs del DOM
 function getInputs() {
   inputCuartos = document.querySelector("#input-cantidad").value
   inputMetrosMin = document.querySelector("#metros-min").value
   inputMetrosMax = document.querySelector("#metros-max").value
  }
+
  
  //chequea que los campos no estén vacios
  function checkEmptyField() {
    if (inputCuartos == "" || inputMetrosMin == "" || inputMetrosMax == "") {
      alert("Faltan campos por llenar")
+     return false
    }
+   return true
  }
  
  //recorre el array, selecciona los objetos que cumplen con la busqueda y crea el template

@@ -1,0 +1,25 @@
+body {
+    background-color:#E0E0E0;
+    font-family:Roboto, sans-serif;
+    margin-left:5%;
+    margin-top: 5%;
+}
+
+hr {
+    color: black;
+}
+
+.inputUsuario {
+    margin: 10px auto 20px;
+}
+
+.inputUsuario button{
+    margin-left:10px;
+}
+
+.iconoEliminar {
+    cursor:pointer;
+    color:red;
+    font-size:1.2em;
+    font-weight:bold;
+}
