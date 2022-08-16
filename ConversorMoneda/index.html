@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monedas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+    <hr>
+    <h1>Conversor de monedas Nacional</h1>
+    <hr>
+    <div>
+        <div class="conversor mx-auto d-grid gap-3 pt-3 pb-3">
+            <h2>Pesos CLP</h2>
+            <input class="w-50 mx-auto" type="text" placeholder="Ingrese el monto en CLP">
+            <h4>Moneda a convertir:</h4>
+            <div class="d-grid gap-3 w-50 mx-auto">
+                <select >
+                    <option selected disabled hidden>Seleccione moneda</option>
+                    <option>UF</option>
+                    <option>IVP</option>
+                    <option>Dolar</option>
+                    <option>Euro</option>
+                    <option>UTM</option>
+                </select>
+                <button id="boton" class="btn btn-info">Buscar</button>
+            </div>
+            <h5><strong>Resultado: $<span></span></strong></h5>
+        </div>
+
+
+        <div id="grafico">
+            <canvas id="myChart"></canvas>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"> </script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
